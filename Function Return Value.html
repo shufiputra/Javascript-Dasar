@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Function Return Value</title>
+</head>
+<body>
+    <script>
+
+        // Membuat function dengan parameter dan return value
+        function sayHello(firstName, lastName){
+            const say = `Hello ${firstName} ${lastName}`;
+            return say;
+        }
+
+        // memanggil function dan menangkap return valuenya
+        const result = sayHello("Shufi", "Putra");
+        document.writeln(`<p>${result}</p>`);
+
+        // Function Return value lebih dari satu
+        function getFinalValue(value) {
+            if (value > 90) {
+                return "A";
+            } else if (value > 80) {
+                return "B";
+            } else if (value > 70) {
+                return "C";
+            } else if (value > 60) {
+                return "D"
+        } else {
+            return "E";
+        }
+    }
+
+    const finalValue = getFinalValue(40);
+    document.writeln(`<p>${finalValue}</p>`);
+
+    // Menghentikan Eksekusi dengan return
+    function isContains(array, searchValue) {
+        for (const element of array) {
+            console.info(`Iterasi Element ${element}`);
+                if (element === searchValue){
+                    return true;
+            }
+        }
+        return false;
+    }
+
+    const array = [1, 214, 23, 32, 23, 32, 123, 235, 235, 333, 333];
+    const search = 32;
+    const found = isContains(array, search);
+    document.writeln(`<p>${found}</p>`);
+
+    </script>
+</body>
+</html>
